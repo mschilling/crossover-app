@@ -15,10 +15,41 @@ import { MovieService } from '../../providers/movie-service';
 })
 export class MovieListPage {
 
-  constructor(public navCtrl: NavController, private movieService: MovieService) {}
+  movies: Array<any>;
+
+
+  constructor(public navController: NavController, private movieService: MovieService) {
+
+    //let result = this.movieService.searchMovies("Arrow");
+    //console.log(result);
+
+  }
+
+  searchMovieDB(event, key) {
+    if(event.target.value.length > 2) {
+      this.movieService.searchMovies(event.target.value).subscribe(
+        data => {
+          this.movies = data.results;
+          console.log(data);
+        },
+        err => {
+          console.log(err);
+        },
+        () => console.log('Movie Search Complete')
+      );
+    }
+  }
+
+  itemTapped(event, movie) {
+    console.log(movie);
+    this.navController.push(MovieInfo, {
+      movie: movie
+    });
+  }
 
   ionViewDidLoad() {
     console.log('Hello MovieList Page');
   }
+
 
 }
