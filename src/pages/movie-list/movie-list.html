@@ -21,9 +21,9 @@
 
   <ion-list>
     <ion-item *ngFor="let movie of movies" (click)="itemTapped($event, movie)">
-      <ion-avatar item-left>
+      <ion-thumbnail item-left>
         <img src="https://image.tmdb.org/t/p/w92{{movie.poster_path}}"/>
-      </ion-avatar>
+      </ion-thumbnail>
       <h2>{{movie.original_title}}</h2>
       <p class="item-description">{{movie.overview}}</p>
     </ion-item>
