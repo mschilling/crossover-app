@@ -20,8 +20,18 @@ export class TimelinePage {
   constructor(public navCtrl: NavController, private seriesService: SeriesService) {
     this.seriesService.getTimeline().subscribe(
       data => {
-        this.items = data.results;
-        console.log(data);
+        this.items = data.data.sort((obj1: IObj, obj2: IObj) => {
+          if (obj1.id< obj2.id) {
+            return -1;
+          }
+          if (obj1.id > obj2.id) {
+            return 1;
+          }
+
+          return 0;
+        })
+
+        console.log(this.items);
       },
       err => {
         console.log(err);

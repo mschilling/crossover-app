@@ -3,8 +3,10 @@
   "app_id": "28431f5a",
   "v2": true,
   "typescript": true,
-  "proxies": [{
-    "path": "/api",
-    "proxyUrl": "http://api.michaelschilling.com"
-  }]
+  "proxies": [
+    {
+      "path": "/tvdb-api",
+      "proxyUrl": "https://api.thetvdb.com"
+    }
+  ]
 }

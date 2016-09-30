@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -11,6 +11,9 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class SeriesService {
 
+  private baseUrl: string = '/tvdb-api';
+  //private baseUrl: string = 'https://api.thetvdb.com';
+
   static get parameters() {
     return [[Http]];
   }
@@ -20,10 +23,18 @@ export class SeriesService {
   }
 
   getTimeline() {
-    console.log('Get TV Series timeline');
-    var url = '/api/series/timeline';
-    var response = this.http.get(url).map(res => res.json());
+
+    //localStorage.setItem('auth_token', this.accessToken);
+    let authToken = localStorage.getItem('auth_token');
+    let headers = new Headers({ 'Accept': 'application/json' });
+    headers.append('Authorization', 'Bearer ' + authToken);
+
+    let options = new RequestOptions({ headers: headers });
+
+    var url = this.baseUrl + '/series/257655/episodes';
+    var response = this.http.get(url, options).map(res => res.json());
     return response;
   }
+
 
 }
