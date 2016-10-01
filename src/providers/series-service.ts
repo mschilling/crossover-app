@@ -32,7 +32,8 @@ export class SeriesService {
     let options = new RequestOptions({ headers: headers });
 
     var url = this.baseUrl + '/series/257655/episodes';
-    var response = this.http.get(url, options).map(res => res.json());
+    url = 'http://api.michaelschilling.com/series/timeline';
+    var response = this.http.get(url).map(res => res.json());
     return response;
   }
 
