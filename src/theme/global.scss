@@ -10,3 +10,47 @@
 // automatically applied to the <body> element in the app.
 //
 // App Shared Sass variables belong in app.variables.scss.
+ion-app{
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.list-md .item-block .item-inner {
+  border-bottom: 1px solid $secondary-color !important;
+}
+
+.tabbar{
+  background-color: $background-color !important;
+  border-top: none !important;
+}
+
+.toolbar-background{
+  background-color: $background-color !important;
+  border: none !important;
+}
+
+.toolbar-title{
+  color: $primary-color !important;
+}
+
+.header-md::after,
+.tabs-md[tabsPlacement="top"] > .tabbar::after,
+.footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+  background-color: $secondary-color !important;
+}
+
+.new-label{
+  background-color: #5cb844 !important;
+  color: #ffffff;
+}
+
+.tabbar::after {
+  background-color: $secondary-color !important;
+}
+
+.item-block {
+  border-bottom: 0.55px solid rgba(140, 140, 140, 0.47) !important;
+}
+
+.list-ios .item-block .item-inner {
+  border-bottom: none !important;
+}

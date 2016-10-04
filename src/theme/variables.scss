@@ -2,7 +2,6 @@
 // http://ionicframework.com/docs/v2/theming/
 @import "ionic.globals";
 
-
 // Shared Variables
 // --------------------------------------------------
 // To customize the look and feel of this app, you can override
@@ -10,9 +9,10 @@
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
-$text-color:        #8a898e;
-$background-color:  #0d0d0d;
-
+$text-color: #8a898e;
+$background-color: #0d0d0d;
+$primary-color: #e11f26;
+$secondary-color: #0d0d0d;
 
 // Named Color Variables
 // --------------------------------------------------
@@ -23,14 +23,13 @@ $background-color:  #0d0d0d;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #e11f26,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #181818,
-  favorite:   #69BB7B
+        primary: #e11f26,
+        secondary: #32db64,
+        danger: #f53d3d,
+        light: #f4f4f4,
+        dark: #181818,
+        favorite: #69BB7B
 );
-
 
 // App Theme
 // --------------------------------------------------
@@ -41,7 +40,6 @@ $colors: (
 
 @import "ionic.theme.default";
 
-
 // Ionicons
 // --------------------------------------------------
 // The premium icon font for Ionic. For more info, please see:
@@ -50,41 +48,6 @@ $colors: (
 $ionicons-font-path: "../assets/fonts";
 @import "ionicons";
 
-// Custom CSS
-// Temporary as fix for global.scss
-ion-app{
-  font-family: 'Oswald', sans-serif !important;
-}
-
-
-
-.tabbar{
-  background-color: #181818 !important;
-  border-top: none !important;
-}
-
-.toolbar-background{
-  background-color: #181818 !important;
-  border: none !important;
-}
-
-.toolbar-title{
-  color: #e11f26 !important;
-}
-
-.new-label{
-  background-color: #5cb844 !important;
-  color: #ffffff;
-}
-
-.tabbar::after {
-  background-color: #0d0d0d !important;
-}
-
-.item-block {
-  border-bottom: 0.55px solid rgba(140, 140, 140, 0.47) !important;
-}
-
-.list-ios .item-block .item-inner {
-  border-bottom: none !important;
-}
+// Global overwrite styles
+// --------------------------------------------------
+@import "global";
