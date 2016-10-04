@@ -1,7 +1,7 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "crossover",
+  "author": "Michael Schilling, Dennis Bruijn",
+  "homepage": "http://crossover.app/",
   "private": true,
   "scripts": {
     "build": "ionic-app-scripts build",
@@ -38,5 +38,5 @@
       "locator": "ios"
     }
   ],
-  "description": "Crossover: An Ionic project"
+  "description": "Crossover: find your television series crossovers"
 }
