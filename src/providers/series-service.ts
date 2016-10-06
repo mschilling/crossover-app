@@ -11,9 +11,6 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class SeriesService {
 
-  private baseUrl: string = '/tvdb-api';
-  //private baseUrl: string = 'https://api.thetvdb.com';
-
   static get parameters() {
     return [[Http]];
   }
@@ -21,20 +18,20 @@ export class SeriesService {
   constructor(public http: Http) {
   }
 
-  getTimeline() {
-
-    //localStorage.setItem('auth_token', this.accessToken);
-    let authToken = localStorage.getItem('auth_token');
-    let headers = new Headers({ 'Accept': 'application/json' });
-    headers.append('Authorization', 'Bearer ' + authToken);
-
-    let options = new RequestOptions({ headers: headers });
-
-    var url = this.baseUrl + '/series/257655/episodes';
-    url = 'http://api.michaelschilling.com/series/timeline';
-    var response = this.http.get(url).map(res => res.json());
-    return response;
-  }
+  //getTimeline() {
+  //
+  //  //localStorage.setItem('auth_token', this.accessToken);
+  //  let authToken = localStorage.getItem('auth_token');
+  //  let headers = new Headers({ 'Accept': 'application/json' });
+  //  headers.append('Authorization', 'Bearer ' + authToken);
+  //
+  //  let options = new RequestOptions({ headers: headers });
+  //
+  //  var url = this.baseUrl + '/series/257655/episodes';
+  //  url = 'http://api.michaelschilling.com/series/timeline';
+  //  var response = this.http.get(url).map(res => res.json());
+  //  return response;
+  //}
 
 
   getTimelineFromLocalStorage() {
