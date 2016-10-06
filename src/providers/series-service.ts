@@ -19,7 +19,6 @@ export class SeriesService {
   }
 
   constructor(public http: Http) {
-    console.log('Hello SeriesService Provider');
   }
 
   getTimeline() {

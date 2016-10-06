@@ -24,7 +24,6 @@ export class TimelinePage {
   }
 
   ionViewDidLoad() {
-    console.log('Hello Timeline Page');
   }
 
 }
