@@ -18,28 +18,9 @@ export class TimelinePage {
   items: Array<any>;
 
   constructor(public navCtrl: NavController, private seriesService: SeriesService) {
-    this.seriesService.getTimeline().subscribe(
-      data => {
-        this.items = data;
 
-        //  .sort((obj1: IObj, obj2: IObj) => {
-        //  if (obj1.id< obj2.id) {
-        //    return -1;
-        //  }
-        //  if (obj1.id > obj2.id) {
-        //    return 1;
-        //  }
-        //
-        //  return 0;
-        //})
+    this.items = seriesService.getTimelineFromLocalStorage();
 
-        console.log(this.items);
-      },
-      err => {
-        console.log(err);
-      },
-      () => console.log('Series Timeline Search Complete')
-    );
   }
 
   ionViewDidLoad() {
