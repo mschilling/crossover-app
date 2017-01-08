@@ -12,7 +12,7 @@ export class HomePage {
   cards: FirebaseListObservable<any>;
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController, af: AngularFire) {
-    this.cards = af.database.list('/user_timelines/michael/dc', {
+    this.cards = af.database.list('/timelines/marvel', {
       query: {
         orderByChild: 'aired',
         limitToLast: 150
