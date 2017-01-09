@@ -17,6 +17,7 @@ export class TimelinePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, af: AngularFire) {
     console.log('Fetch data from Firebase');
+    console.log('navParams', navParams);
     this.cards = af.database.list('/timelines/marvel', {
       query: {
         orderByChild: 'aired',
