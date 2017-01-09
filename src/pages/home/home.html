@@ -1,8 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Marvel Timeline
-    </ion-title>
+    <ion-title>Home</ion-title>
     <!--<ion-buttons end>
       <button ion-button icon-only (click)="addSong()">
         <ion-icon name="add"></ion-icon>
@@ -13,44 +11,5 @@
 
 <ion-content padding>
 
-    <ion-card *ngFor="let item of cards | async">
-
-      <ion-item>
-        <!--<h1>{{ item.serieName }}</h1>-->
-        <!--<h2>S{{ item.season }}E{{ item.episode }} - {{ item.title }}</h2>-->
-        <h2>{{ item.serieName }} - S{{ item.season }}E{{ item.episode }}</h2>
-        <p>{{ item.aired | date : 'dd-MM-yyyy' }}</p>
-      </ion-item>
-
-      <img src="{{ item.picture }}">
-
-      <ion-card-content>
-        <ion-card-title>
-          {{ item.title }}
-        </ion-card-title>
-        <p>{{ item.overview }}</p>
-      </ion-card-content>
-
-      <ion-row>
-        <ion-col>
-          <button ion-button icon-left clear small>
-        <ion-icon name="thumbs-up"></ion-icon>
-        <div>Season {{ item.season }}</div>
-      </button>
-        </ion-col>
-        <ion-col>
-          <button ion-button icon-left clear small>
-        <ion-icon name="text"></ion-icon>
-        <div>Episode {{ item.episode }}</div>
-      </button>
-        </ion-col>
-        <!--<ion-col center text-center>
-          <ion-note>
-            {{ item.aired | date : 'dd-MM-yyyy' }}
-          </ion-note>
-        </ion-col>-->
-      </ion-row>
-
-    </ion-card>
 
 </ion-content>
