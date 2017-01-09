@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
+import { TimelinePage } from '../timeline/timeline';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -19,6 +21,19 @@ export class HomePage {
       }
     });
   }
+
+   openTimeline(value) {
+    //push another page onto the history stack
+    //causing the nav controller to animate the new page in
+    console.log('Open timeline', value);
+
+    if(value=="1") {
+      this.navCtrl.push(TimelinePage, { timeline: 1 });
+    } else if (value=="2") {
+      this.navCtrl.push(TimelinePage, { timeline: 2 });
+    }
+  }
+
 
 addSong(){
   let prompt = this.alertCtrl.create({

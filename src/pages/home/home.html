@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Crossover</ion-title>
     <!--<ion-buttons end>
       <button ion-button icon-only (click)="addSong()">
         <ion-icon name="add"></ion-icon>
@@ -11,7 +11,7 @@
 
 <ion-content padding>
 
-  <ion-card>
+  <ion-card (click)="openTimeline(1)">
     <img src="https://image.tmdb.org/t/p/w454_and_h254_bestv2/j4tw5k3UGNGvPWp844pF4eYhgrh.jpg" />
     <ion-card-content>
       <ion-card-title>
@@ -19,17 +19,17 @@
       </ion-card-title>
       <p>Arrow, Flash, DC Legends of Tomorrow and Supergirl</p>
     </ion-card-content>
-    <ion-row>
+    <!--<ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
         <ion-icon name="thumbs-up"></ion-icon>
         <div>Open</div>
       </button>
       </ion-col>
-    </ion-row>
+    </ion-row>-->
   </ion-card>
 
-  <ion-card>
+  <ion-card (click)="openTimeline(2)">
     <img src="https://image.tmdb.org/t/p/w454_and_h254_bestv2/8PRQB2C6qbnqySbMWC9C9QduVRk.jpg" />
     <ion-card-content>
       <ion-card-title>
@@ -37,14 +37,14 @@
       </ion-card-title>
       <p>Daredevil, Jessica Jones and Luke Cage</p>
     </ion-card-content>
-    <ion-row>
+    <!--<ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
         <ion-icon name="thumbs-up"></ion-icon>
         <div>Open</div>
       </button>
       </ion-col>
-    </ion-row>
+    </ion-row>-->
   </ion-card>
 
 

@@ -18,16 +18,29 @@ export class TimelinePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, af: AngularFire) {
     console.log('Fetch data from Firebase');
     console.log('navParams', navParams);
-    this.cards = af.database.list('/timelines/marvel', {
+
+    let path = '/timelines/marvel';
+
+    switch(navParams.data.timeline) {
+      case 1:
+        path = `/timelines/dc`;
+        break;
+      case 2:
+        path = `/timelines/marvel`;
+        break;
+    }
+
+
+    this.cards = af.database.list(path, {
       query: {
         orderByChild: 'aired',
-        limitToLast: 150
+        limitToLast: 15
       }
     });
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TimelinePage');
+    // console.log('ionViewDidLoad TimelinePage');
   }
 
 }
