@@ -34,7 +34,7 @@ export class TimelinePage {
     this.cards = af.database.list(path, {
       query: {
         orderByChild: 'aired',
-        limitToLast: 15
+        limitToLast: 500
       }
     });
   }
