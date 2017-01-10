@@ -17,7 +17,7 @@ export class TimelinePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, af: AngularFire) {
     console.log('Fetch data from Firebase');
-    console.log('navParams', navParams);
+    // console.log('navParams', navParams);
 
     let path = '/timelines/marvel';
 
@@ -29,7 +29,6 @@ export class TimelinePage {
         path = `/timelines/marvel`;
         break;
     }
-
 
     this.cards = af.database.list(path, {
       query: {
