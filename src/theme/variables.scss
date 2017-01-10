@@ -1,9 +1,6 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/v2/theming/
-$font-path: "../assets/fonts";
-
 @import "ionic.globals";
-
 
 // Shared Variables
 // --------------------------------------------------
@@ -11,9 +8,16 @@ $font-path: "../assets/fonts";
 // the Sass variables found in Ionic's source scss files.
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+$text-color: #221f1f;
+$text-color-reversed: #fff;
+$background-color: #fff;
 
+$white: #fff;
+$black: #221f1f;
+$gray: #adadad;
+$grayLight: #f1f1f1;
 
-
+$primary-color: #e50914;
 
 // Named Color Variables
 // --------------------------------------------------
@@ -24,34 +28,11 @@ $font-path: "../assets/fonts";
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #387ef5,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
+        primary: $primary-color,
+        danger: $primary-color,
+        light: $gray,
+        dark: $black
 );
-
-
-// App iOS Variables
-// --------------------------------------------------
-// iOS only Sass variables can go here
-
-
-
-
-// App Material Design Variables
-// --------------------------------------------------
-// Material Design only Sass variables can go here
-
-
-
-
-// App Windows Variables
-// --------------------------------------------------
-// Windows only Sass variables can go here
-
-
-
 
 // App Theme
 // --------------------------------------------------
@@ -60,19 +41,71 @@ $colors: (
 // so that the above variables are used and Ionic's
 // default are overridden.
 
-@import "ionic.theme.default";
-
+// @import "ionic.theme.fullcube";
 
 // Ionicons
 // --------------------------------------------------
 // The premium icon font for Ionic. For more info, please see:
 // http://ionicframework.com/docs/v2/ionicons/
 
+$ionicons-font-path: "../assets/fonts";
 @import "ionicons";
-
 
 // Fonts
 // --------------------------------------------------
+// Change the font type and info
 
-@import "roboto";
-@import "noto-sans";
+$font-family-base: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+// Toolbar
+// --------------------------------------------------
+// Change the color of the toolbar
+
+$toolbar-ios-title-text-color: $primary-color;
+$toolbar-md-title-text-color: $primary-color;
+$toolbar-wp-title-text-color: $primary-color;
+
+$toolbar-background: $black;
+$toolbar-border-color: $black;
+
+$toolbar-active-color: $black;
+$toolbar-inactive-color: $black;
+
+.back-button {
+  color: $primary-color !important;
+}
+
+// Content
+// --------------------------------------------------
+// Change the color of the content
+
+$content-ios-outer-background: $black;
+$content-ios-transition-background: $black;
+.content {
+  background-color: lighten($black, 5%) !important;
+}
+
+// Content
+// --------------------------------------------------
+// Change the color of the content
+
+.card {
+  background-color: $black !important;
+
+  .card-title {
+    color: $primary-color !important;
+  }
+
+  .card-content {
+    p{
+      color: $gray !important;
+    }
+  }
+}
+
+.item {
+  background-color: $black !important;
+  h2{
+    color: $primary-color !important;
+  }
+}
