@@ -12,13 +12,22 @@
 
 <ion-content padding>
 
+  <div class="timeline-cards">
+
     <ion-card *ngFor="let item of cards | async">
 
       <ion-item>
-        <!--<h1>{{ item.serieName }}</h1>-->
-        <!--<h2>S{{ item.season }}E{{ item.episode }} - {{ item.title }}</h2>-->
-        <h2>{{ item.serieName }} - S{{ item.season }}E{{ item.episode }}</h2>
-        <p>{{ item.aired | date : 'dd-MM-yyyy' }}</p>
+        <ion-row>
+          <ion-col>
+            <ion-note>{{ item.serieName }} &middot; {{ item.aired | amDateFormat:'LL' }}</ion-note>
+          </ion-col>
+
+          <ion-col right text-right>
+            <ion-note>S{{ item.season }}E{{ item.episode }}</ion-note>
+          </ion-col>
+
+        </ion-row>
+
       </ion-item>
 
       <img src="{{ item.picture }}">
@@ -31,25 +40,22 @@
       </ion-card-content>
 
       <ion-row>
-        <ion-col>
-          <button ion-button icon-left clear small>
-        <ion-icon name="thumbs-up"></ion-icon>
-        <div>Season {{ item.season }}</div>
-      </button>
-        </ion-col>
-        <ion-col>
-          <button ion-button icon-left clear small>
-        <ion-icon name="text"></ion-icon>
-        <div>Episode {{ item.episode }}</div>
-      </button>
-        </ion-col>
         <!--<ion-col center text-center>
-          <ion-note>
-            {{ item.aired | date : 'dd-MM-yyyy' }}
-          </ion-note>
+          <ion-note></ion-note>
         </ion-col>-->
+
+        <ion-col text-right>
+          <button ion-button icon-left clear small>
+            <ion-icon name="play"></ion-icon>
+            <div>Play</div>
+          </button>
+        </ion-col>
+
       </ion-row>
 
     </ion-card>
+
+
+  </div>
 
 </ion-content>
