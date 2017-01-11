@@ -4,10 +4,12 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TimelinePage } from '../pages/timeline/timeline';
 
-
 // //http://www.joshmorony.com/building-a-crud-ionic-2-application-with-firebase-angularfire/
 // Import the AF2 Module
 import { AngularFireModule } from 'angularfire2';
+
+// Add momentjs support: https://github.com/urish/angular-moment
+import {MomentModule} from 'angular2-moment';
 
 // AF2 Settings
 export const firebaseConfig = {
@@ -26,7 +28,8 @@ export const firebaseConfig = {
   ],
   imports: [
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    MomentModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
