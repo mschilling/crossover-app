@@ -18,4 +18,11 @@
 div.timeline-cards {
   max-width: 600px;
   margin: 0 auto;
+
+  ion-card-content {
+    ion-card-title {
+      font-size: 2.0rem;
+      line-height: 0.9;
+    }
+  }
 }

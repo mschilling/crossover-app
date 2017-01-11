@@ -14,7 +14,7 @@ $background-color: #fff;
 
 $white: #fff;
 $black: #221f1f;
-$gray: #adadad;
+$gray: #c5c5c5;
 $grayLight: #f1f1f1;
 
 $primary-color: #db0000;
@@ -93,7 +93,7 @@ $content-ios-transition-background: $black;
   background-color: $black !important;
 
   .card-title {
-    color: $primary-color !important;
+    color: $gray !important;
   }
 
   .card-content {
