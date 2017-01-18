@@ -3,11 +3,11 @@
   "short_name": "Crossover",
   "description": "Choose a side and watch",
   "start_url": "index.html",
-  "background_color": "#4e8ef7",
-  "theme_color": "#4e8ef7",
+  "background_color": "#221f1f",
+  "theme_color": "#db0000",
   "display": "standalone",
   "icons": [{
-    "src": "assets/imgs/logo.png",
+    "src": "assets/images/icon.png",
     "sizes": "512x512",
     "type": "image/png"
   }],
