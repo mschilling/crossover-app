@@ -1,30 +1,34 @@
 # Crossover
+Choose a side and watch 📺
 
 ## Development setup
 
 #### - Install NodeJS
 
-#### - Install tools
+#### - Install tooling
 
 Install Cordova:
-- `sudo npm install -g cordova'
+`sudo npm install -g cordova`
 
 Install Ionic:
-- `sudo npm install -g ionic'
-
-optional:
+`$ sudo npm install -g ionic`
 
 Install Firebase Tools:
-- `sudo npm install -g firebase-tools`
+`$ sudo npm install -g firebase-tools`
 (more info: https://firebase.google.com/docs/cli/)
 
 #### - Install dependencies
-
-- `npm install`
+`$ npm install`
 
 #### - Run Project
 by default, just type:
-`ionic serve`
+`$ ionic serve`
+
+want multiple devices type:
+`$ ionic serve -l`
+
+#### - Run project on devices
+`$ ionic android run` or `$ ionic ios run`  to run the project on connected or virtual devices.
 
 ## Notes
 

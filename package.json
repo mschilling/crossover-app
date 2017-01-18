@@ -1,7 +1,7 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "crossover",
+  "author": "crossover",
+  "homepage": "https://github.com/mschilling/crossover-app",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -51,5 +51,5 @@
       "locator": "ios"
     }
   ],
-  "description": "ionic-firebase2: An Ionic project"
+  "description": "Crossover: choose a side and watch"
 }
