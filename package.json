@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "^1.0.0",
+    "@types/jasmine": "^2.5.41",
     "typescript": "2.0.9"
   },
   "cordovaPlugins": [
