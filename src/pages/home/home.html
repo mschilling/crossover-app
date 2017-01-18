@@ -1,11 +1,14 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Crossover</ion-title>
-    <!--<ion-buttons end>
-      <button ion-button icon-only (click)="addSong()">
-        <ion-icon name="add"></ion-icon>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="login()" *ngIf="!(af.auth | async)">
+        <ion-icon name="contact"></ion-icon>
       </button>
-    </ion-buttons>-->
+      <button ion-button icon-only (click)="logout()" *ngIf="(af.auth | async)">
+        <ion-icon name="exit"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
