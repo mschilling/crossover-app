@@ -39,3 +39,4 @@ want multiple devices type:
 `ionic platform add browser`
 and build with..
 `ionic build browser --prod`
+
