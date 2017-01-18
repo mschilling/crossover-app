@@ -10,9 +10,9 @@ script:
 - npm install
 - ionic platform add browser
 - ionic build browser --prod
-- firebase list
-- firebase use crossover-app
 after_success:
+- firebase list --token=${FIREBASE_API_TOKEN}
+- firebase use crossover-app --token=${FIREBASE_API_TOKEN}
 - firebase deploy --token=${FIREBASE_API_TOKEN}
 notifications:
   slack:
