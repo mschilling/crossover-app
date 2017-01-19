@@ -9,6 +9,7 @@ before_script:
 script:
 - ls
 - npm install
+- mkdir www
 - ionic platform add browser
 - ionic build browser --prod
 - ls
