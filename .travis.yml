@@ -7,13 +7,22 @@ before_script:
 - npm install -g ionic
 - npm install -g firebase-tools
 script:
+- ls
 - npm install
+- mkdir www
 - ionic platform add browser
 - ionic build browser --prod
+- ls
 after_success:
 - firebase list --token "${FIREBASE_API_TOKEN}"
 - firebase use crossover-app --token "${FIREBASE_API_TOKEN}"
 - firebase deploy --token "${FIREBASE_API_TOKEN}"
+cache:
+  directories:
+    - $(npm config get prefix)/bin/cordova
+    - $(npm config get prefix)/bin/ionic
+    - $(npm config get prefix)/bin/firebase-tools
+    - node_modules
 notifications:
   slack:
     secure: dEzjinut0iAXbwAxND2MmIHa+H6aknX/VXHyY/DRZEMPKMY3YqKBS2Mg84vzs/JEufZcZX5xHuFpWQ44O9Riqi99ZiMNccKebzhBTg0gkjl7MXnfe++6D5HQmRXfLHeyjqBDTzYFrIcRYoQpVqIgdz+Gpy5+EJTNwTgwa1E3/csLzgIp31HcZoJvZDH3GE+sUurf5w/kccS/C5552PqCF1g9U2pm3L9+ELEoACinSkl/OLu8C+X/JWjWzRYN5tozxD0ZFu9Oe+0ZNeaTnZaJ9TdXagVNMEqrwvvCgrH9XVNMj7MErGOE9roQXPv7HDHzVR19k6S0s3yxxypXYf123gg5vroCY3FkXqPG0s10T/IVE3zurjOGN45h3DJAj4plTvxJfLq6rKZ2Fnd7sem12RX5rbVgDMhrH7wvlwj00/O0rkqKXtHFGsgknyp6BGKXXyDJOa92tUNxL1hu3AvFUQ9nsQW833IeDpPCoz/A8J23LWI7Wgpn0kA77E8OdoJ8+iKnleQ0XXjWHd7QBGk8oBrZTaYtIRT3y56dBG3yJy3P/w19SpFR293ngU6vkI8uA0DwlIaun6Zd79VTsqI7PHDjis4TwSpYukXaOG8xb0+gOVthxA7JKKAH/QBA2NcEgZTLxAdGOZMvO0/OD+r84ovF/wLb6BlFWepCXrYR3vg=
