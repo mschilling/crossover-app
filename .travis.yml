@@ -8,9 +8,9 @@ before_script:
 - npm install -g firebase-tools
 script:
 - npm install
-- ionic platform add browser --verbose
-- cordova platform add browser
+- ionic platform add browser
 - ionic build browser --prod
+- ls
 after_success:
 - firebase list --token "${FIREBASE_API_TOKEN}"
 - firebase use crossover-app --token "${FIREBASE_API_TOKEN}"
