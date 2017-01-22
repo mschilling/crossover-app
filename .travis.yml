@@ -3,17 +3,18 @@ node_js:
 - node
 dist: trusty
 before_script:
-- npm install -g cordova
-- npm install -g ionic
+#- npm install -g cordova
+#- npm install -g ionic
 - npm install -g firebase-tools
 script:
 - ls
-- npm install
-- mkdir www
-- ionic platform add browser
-- ionic build browser --prod
-- ls
+#- npm install
+#- mkdir www
+#- ionic platform add browser
+#- ionic build browser --prod
+#- ls
 after_success:
+- chmod +x /travis_scripts/deploy.sh
 - ./travis_scripts/deploy.sh
 cache:
   directories:
