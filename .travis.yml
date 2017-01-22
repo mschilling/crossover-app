@@ -14,9 +14,7 @@ script:
 - ionic build browser --prod
 - ls
 after_success:
-- firebase list --token "${FIREBASE_API_TOKEN}"
-- firebase use crossover-app --token "${FIREBASE_API_TOKEN}"
-- firebase deploy --token "${FIREBASE_API_TOKEN}"
+- ./travis_scripts/deploy.sh
 cache:
   directories:
     - $(npm config get prefix)/bin/cordova
