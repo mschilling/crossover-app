@@ -4,9 +4,9 @@ node_js:
 dist: trusty
 before_script:
 - chmod +x travis_scripts/install.sh
-- ./install.sh cordova
-- ./install.sh ionic
-- ./install.sh firebase-tools
+- ./travis_scripts/install.sh cordova
+- ./travis_scripts/install.sh ionic
+- ./travis_scripts/install.sh firebase-tools
 script:
 - ls
 - npm install
