@@ -15,7 +15,7 @@ script:
 - ls
 after_success:
 - chmod +x travis_scripts/deploy.sh
-- ./travis_scripts/deploy.sh
+- ./travis_scripts/deploy.sh crossover-app
 cache:
   directories:
     - $(npm config get prefix)/bin/cordova

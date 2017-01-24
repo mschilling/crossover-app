@@ -1,5 +1,10 @@
 #!/bin/bash
 echo "Executing deploy script..."
+if [ -z "$1" ]; then
+    echo "No alias/project id supplied as argument..."
+    echo "Exiting."
+    exit 1
+fi
 echo "Branch: $TRAVIS_BRANCH"
 if [ $TRAVIS_BRANCH == "master" ]; then
     echo "Branch is master..."
@@ -8,7 +13,7 @@ if [ $TRAVIS_BRANCH == "master" ]; then
     if [ $TRAVIS_PULL_REQUEST == false ]; then
         echo "Initiate deployment :)"
         firebase list --token "${FIREBASE_API_TOKEN}"
-        firebase use crossover-app --token "${FIREBASE_API_TOKEN}"
+        firebase use $1 --token "${FIREBASE_API_TOKEN}"
         firebase deploy --token "${FIREBASE_API_TOKEN}"
     else
         echo "Is a pull request..."
