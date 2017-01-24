@@ -3,9 +3,10 @@ node_js:
 - node
 dist: trusty
 before_script:
-- npm install -g cordova
-- npm install -g ionic
-- npm install -g firebase-tools
+- chmod +x travis_scripts/install.sh
+- ./install.sh cordova
+- ./install.sh ionic
+- ./install.sh firebase-tools
 script:
 - ls
 - npm install
