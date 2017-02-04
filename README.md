@@ -1,4 +1,4 @@
-# Crossover
+# Crossover [![Build Status](https://travis-ci.org/mschilling/crossover-app.svg?branch=master)](https://travis-ci.org/mschilling/crossover-app)
 Choose a side and watch 📺
 
 ## Development setup
