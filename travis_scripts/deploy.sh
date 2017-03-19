@@ -12,7 +12,6 @@ if [ $TRAVIS_BRANCH == "master" ]; then
     echo "Pull Request: $TRAVIS_PULL_REQUEST"
     if [ $TRAVIS_PULL_REQUEST == false ]; then
         echo "Initiate deployment :)"
-        firebase list --token "${FIREBASE_API_TOKEN}"
         firebase use $1 --token "${FIREBASE_API_TOKEN}"
         firebase deploy --token "${FIREBASE_API_TOKEN}"
     else
